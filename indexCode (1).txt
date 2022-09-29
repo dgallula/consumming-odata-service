@@ -1,0 +1,30 @@
+index.html
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ZPROJ29_ODATA</title>
+		<script id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_fiori_3"
+			data-sap-ui-resourceroots='{"ZPROJ29_ODATA.ZPROJ29_ODATA": "./"}'
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-async="true"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-frameOptions="trusted">
+		</script>
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				var app = new sap.m.App({initialPage:"idPage1"});
+				var page1 = sap.ui.view({id:"idPage1",viewName:"ZPROJ29_ODATA.ZPROJ29_ODATA.view.MyView",type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page1);
+				app.placeAt("content");
+			});
+		</script>
+	</head>
+	<body class="sapUiBody">
+		<div data-sap-ui-component data-name="ZPROJ29_ODATA.ZPROJ29_ODATA" data-id="container" data-settings='{"id" : "ZPROJ29_ODATA"}'></div>
+		<div id="content"></div>
+	</body>
+</html>

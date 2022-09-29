@@ -1,0 +1,30 @@
+The service we are going to consume is:
+
+https://services.odata.org/V2/(S(frik5l2zde0sxh4jiifyhqo4))/OData/OData.svc/Products
+
+Metadata:
+
+https://services.odata.org/V2/(S(frik5l2zde0sxh4jiifyhqo4))/OData/OData.svc/$metadata
+
+Collection of Entities
+
+Take an entity: Product
+
+EntitySet Name="Products"
+
+Get the properties for this entity, EntityType Name="Product"
+
+Key property is: ID
+other fields:
+Name
+Description
+ReleaseDate
+etc
+
+Let us assume that we need to display the data related to: ID, Name, Description, ReleaseDate fields
+
+https://services.odata.org/V2/(S(frik5l2zde0sxh4jiifyhqo4))/OData/OData.svc/<Entity Set Name>
+
+https://services.odata.org/V2/(S(frik5l2zde0sxh4jiifyhqo4))/OData/OData.svc/Products - data in XML format
+
+https://services.odata.org/V2/(S(frik5l2zde0sxh4jiifyhqo4))/OData/OData.svc/Products?$format=json - data in JSON format

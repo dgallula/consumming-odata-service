@@ -1,0 +1,48 @@
+<mvc:View controllerName="ZPROJ29_ODATA.ZPROJ29_ODATA.controller.MyView" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="ODATA for Products">
+	<Table id="idOrdersTable"
+		items="{
+			path: '/Products'
+		}">
+		<headerToolbar>
+			<OverflowToolbar>
+				<Title text="Product Details" level="H2"/>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column
+				width="12em">
+				<Text text="ID" />
+			</Column>
+			<Column
+				width="12em">
+				<Text text="Name" />
+			</Column>
+			<Column
+				width="12em">
+				<Text text="Description" />
+			</Column>
+			<Column
+				width="12em">
+				<Text text="Release Date" />
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem>
+				<cells>
+					<Text text="{ID}" />
+					<Text text="{Name}" />
+					<Text text="{Description}" />
+					<Text text="{ReleaseDate}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

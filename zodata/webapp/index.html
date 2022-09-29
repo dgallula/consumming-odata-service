@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>zodata</title>
+    <style>
+        html,
+        body,
+        body>div,
+        #container,
+        #container-uiarea {
+            height: 100%;
+        }
+    </style>
+    <script id="sap-ui-bootstrap" src="resources/sap-ui-core.js" data-sap-ui-theme="sap_horizon"
+        data-sap-ui-resourceroots='{
+            "zodata.zodata": "./"
+        }' data-sap-ui-compatVersion="edge" data-sap-ui-async="true" data-sap-ui-libs="sap.m"
+        data-sap-ui-frameOptions="trusted">
+        </script>
+    <script>
+        sap.ui.getCore().attachInit(function () {  // this function excecute at the initialisation of the page 
+            var app = new sap.m.App({ initialPage: "idPage1" });     // create an app with the intiale  page id as idpage1
+            var page1 = sap.ui.view({ id: "idPage1", viewName: "ZODATA.ZODATA.view.MyView", type: sap.ui.core.mvc.ViewType.XML });
+            // creating the page 
+            app.addPage(page1); // add page 1 to app
+            app.placeAt("content"); // place it a the content (id)
+        });
+    </script>
+
+    <script id="locate-reuse-libs" src="./utils/locate-reuse-libs.js" data-sap-ui-manifest-uri="./manifest.json"
+        data-sap-ui-componentName="zodata.zodata">
+        </script>
+</head>
+
+<body class="sapUiBody sapUiSizeCompact" id="content">
+    <div data-sap-ui-component data-name="zodata.zodata" data-id="container" data-settings='{"id" : "zodata.zodata"}'
+        data-handle-validation="true"></div>
+</body>
+
+</html>
